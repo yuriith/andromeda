@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"HomePage"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+        <section class="page__main main">
+          <div class="main__container">
+            <div class="main__content">
+              <h1 class="main__title title">Разработка цифровых продуктов, автоматизация бизнес-процессов для <span>малого бизнеса</span></h1>
+              <a href="" class="main__button button button-filled">Оставить заявку</a>
+            </div>
+            <div class="main__image">
+              <img src="@img/main/main.png" alt="">
+            </div>
+          </div>
+        </section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

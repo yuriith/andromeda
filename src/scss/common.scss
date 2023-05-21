@@ -1,0 +1,44 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.link {
+  font-weight: 500;
+  font-size: rem(15);
+  line-height: 93.19%;
+  letter-spacing: 0.01em;
+  color: $mainColor;
+  transition: color 0.3s ease 0s;
+  @media (any-hover: hover){
+    &:hover, &:active{
+      color: $accentColor;
+    }
+  }
+}
+.button {
+  display: inline-flex;
+  padding: rem(15) rem(35);
+  font-weight: 600;
+  font-size: rem(15);
+  line-height: math.div(18 , 15);
+  letter-spacing: 0.01em;
+  border-radius: rem(30);
+  border: rem(2) solid $accentColor;
+  transition: all 0.3s ease 0s;
+  &-filled {
+    color: $white;
+    background-color: $accentColor;
+    @media (any-hover: hover){
+      &:hover, &:active{
+        color: $accentColor;
+        background-color: $white;
+      }
+    }
+  }
+  &-outline {
+    color: $accentColor;
+    @media (any-hover: hover){
+      &:hover, &:active{
+        background-color: $accentColor;
+        color: $white;
+      }
+    }
+  }
+}
