@@ -42,3 +42,10 @@
     }
   }
 }
+.title {
+  font-weight: 700;
+  font-size: rem(40);
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: $mainColor;
+}

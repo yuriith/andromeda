@@ -2,15 +2,23 @@
 .page {
   // .page__main
   &__main {
+    margin-bottom: rem(131);
+  }
+  // .page__services
+  &__services {
   }
 }
 .main {
   // .main__container
   &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(83);
   }
   // .main__content
   &__content {
     max-width: rem(560);
+    padding-top: rem(17);
   }
   // .main__title
   &__title {
@@ -23,12 +31,103 @@
       text-decoration: underline;
       color: $accentColor;
     }
+    &:not(:last-child) {
+      margin-bottom: rem(65);
+    }
   }
   // .main__button
   &__button {
+    font-size: 20px;
+    line-height: 150%;
+    padding: rem(15) rem(35);
   }
   // .main__image
   &__image {
   }
 }
+
+.services {
+  // .services__container
+  &__container {
+    padding: rem(0) rem(25);
+  }
+  // .services__title
+  &__title {
+    text-align: center;
+    margin-bottom: rem(55);
+  }
+  // .services__list
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: rem(65);
+    column-gap: rem(50);
+    @media (max-width:$tablet){
+      grid-template-columns: 1fr;
+    }
+  }
+  // .services__item
+  &__item {
+  }
+}
+.item-services {
+  background: #F2F5FD;
+  border-radius: rem(100) rem(30) rem(30) rem(100);
+  display: flex; 
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (min-width: $tablet){
+    &:nth-child(even){
+      .item-services__content {
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+        @include adaptiveValue("padding-left", 40, 10);
+        justify-content: flex-end;
+      }
+      border-radius: rem(30) rem(100) rem(100) rem(30);
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  // .item-services__img
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(150);
+    width: rem(150);
+  }
+  // .item-services__content
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 0 0 rem(310);
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+  // .item-services__title
+  &__title {
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: math.div(29 , 24);
+    letter-spacing: 0.01em;
+    color: $mainColor;
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+  // .item-services__text
+  &__text {
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: rgba(14, 14, 14, 0.6);
+  }
+}
+
 //====================================================================================================
